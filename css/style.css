@@ -22,7 +22,6 @@
 .boton:hover {
     background-color: #c6adff;
     color: white;
-    font-weight: 600;
 }
 
 .botonDos {
@@ -285,6 +284,20 @@ nav img {
     align-items: center;
 }
 
+.formularioMotivo input {
+    appearance: none;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid #ccc7c2;
+}
+
+.formularioMotivo input:checked {
+    border-radius: 50%;
+    border: 5px solid #a48c74;
+}
+
 .formularioMotivo div {
     display: flex;
     justify-content: space-between;
@@ -360,43 +373,60 @@ nav img {
     align-items: center;
 }
 
-.articulosTienda div {
-    width: 250px;
-    height: 400px;
-    margin: 5px;
-    text-align: center;
-}
-
-.articulosTienda div img {
-    width: 250px;
-    height: 300px;
-    margin-top: 15px;
-}
-
-.articulosTienda h3 {
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
 /*!------CONTENEDOR PADRE GRID Y FLEX-----*/
+
 .articulosTienda .productosContenedor {
-    height: 100%;
     width: 100%;
-    margin: 50px;
+    margin: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
+    grid-template-rows: auto;
     gap: 50px;
     justify-items: center;
 }
 
 .articulosTienda .productosContenedor div img {
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 1px 2px 33px 1px rgba(204, 199, 194, 0.72);
+    -webkit-box-shadow: 1px 2px 33px 1px rgba(204, 199, 194, 0.72);
+    -moz-box-shadow: 1px 2px 33px 1px rgba(204, 199, 194, 0.72);
 }
 
-.articulosTienda .productosContenedor div h3 {
+.cardTienda {
+    width: 250px;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardTienda .boton {
+    width: 120px;
+    margin: 15px;
+}
+
+.tiendaItem {
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.tiendaItem h3 {
+    margin: 0;
+    padding: 5px;
     font-size: 20px;
-    margin-top: 15px;
+    font-weight: 400;
+    background-color: #ffffff5b;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 /**---------------------------------ENVIOS----------------------------------*/
@@ -436,8 +466,25 @@ nav img {
     color: #c6adff;
 }
 
-.enviosTipografia {
+.acordeonEstilo {
     font-family: "Arsenal", sans-serif;
+    text-align: left;
+}
+
+.acordeonEstilo a {
+    color: #c6adff;
+    text-decoration: none;
+}
+
+.itemAcordeonEstilo:focus-within {
+    color: #a48c74;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+.itemAcordeonEstilo:visited {
+    color: #212529 !important;
+    background-color:#ffffff;
+    box-shadow: none;
 }
 
 .mapaEnvios {
@@ -488,7 +535,34 @@ nav img {
     color: #c6adff;
     text-decoration: none;
 }
+.consultas .metodoPago {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.metodoPagoItem {
+    margin: 0px 25px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.consultas .metodoPagoItem h3 {
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
 
+.consultas .metodoPagoItem img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /**--------------------------A CERCA DE GAIA-----------------------------*/
 .historia {
     display: flex;
@@ -601,7 +675,7 @@ nav img {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
+    margin: 5px 0px;
 }
 
 .footerContenedor .navBar ul li {
@@ -645,6 +719,7 @@ nav img {
     .productos h2 {
         font-size: 20px;
     }
+
     .footerContenedor .redes a img {
         width: 15px;
         height: 15px;
@@ -739,6 +814,7 @@ nav img {
         height: 330px;
     }
 }
+
 /*--------------------------CONTACTÁNOS--------------------------*/
 @media screen and (max-width:1080px) {
     .contenedorContacto {
@@ -746,77 +822,98 @@ nav img {
         justify-content: center;
         align-items: center;
     }
+
     .formulario {
         width: 100%;
     }
+
     .infoImportante {
         width: 100%;
         height: 200px;
         margin-top: 15px;
     }
+
     .footerContenedor .navBar ul li {
         font-size: 14px;
     }
 }
+
 @media screen and (max-width: 890px) {
     .carrusel h2 {
         font-size: 25px;
     }
+
     .formularioEncabezado h2 {
         font-size: 20px;
     }
+
     .formularioEncabezado p {
-        font-size: 16px; 
+        font-size: 16px;
     }
+
     .infoImportante h3 {
         font-size: 14px;
     }
+
     .infoImportante p {
         font-size: 14px;
     }
+
     .infoImportante {
         height: 180px;
     }
 }
+
 @media screen and (max-width: 750px) {
     .carrusel h2 {
         font-size: 20px;
     }
+
     .formularioEncabezado h2 {
         font-size: 18px;
     }
+
     .formularioEncabezado p {
-        font-size: 14px; 
+        font-size: 14px;
     }
+
     .formulario {
         font-size: 14px;
     }
+
     .detalle h3 {
         font-size: 14px;
     }
 }
+
 @media screen and (max-width: 580px) {
     .carrusel h2 {
         display: none;
     }
+
     .formularioEncabezado h2 {
         font-size: 16px;
     }
+
     .formularioEncabezado p {
-        font-size: 14px; 
+        font-size: 14px;
     }
+
     .formulario {
         font-size: 14px;
     }
+
     .detalle h3 {
         font-size: 14px;
     }
 }
+
 @media screen and (max-width: 380px) {
     .infoImportante {
         height: 190px;
     }
 }
+
 @media screen and (max-width: 350px) {
     .infoImportante {
         height: 200px;
