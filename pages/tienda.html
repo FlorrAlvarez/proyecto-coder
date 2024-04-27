@@ -14,7 +14,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navApariencia">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="../img/logo-gaia-header.png" alt="Logo de Gaia"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo-gaia-header.png"
+                        alt="Logo de Gaia"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -161,12 +162,54 @@
                     </div>
                     <a href="" class="boton">Agregar al carrito</a>
                 </div>
+                <!--AGREGADOS FUERA DE STOCK-->
+                <div class="cardTienda">
+                    <div class="tiendaItem">
+                        <img src="../img/art11.jpg" alt="aros de plata">
+                        <h3>Aros colección ARTEMISA</h3>
+                    </div>
+                    <a href="" class="botonDisabled btn disabled">SIN STOCK</a>
+                </div>
+                <div class="cardTienda">
+                    <div class="tiendaItem">
+                        <img src="../img/art12.jpg" alt="collar de plata">
+                        <h3>Collar colección VENUS</h3>
+                    </div>
+                    <a href="" class="botonDisabled btn disabled">SIN STOCK</a>
+                </div>
+                <div class="cardTienda">
+                    <div class="tiendaItem">
+                        <img src="../img/art13.jpg" alt="pulseras de plata">
+                        <h3>Pulseras colección FREYA</h3>
+                    </div>
+                    <a href="" class="botonDisabled btn disabled">SIN STOCK</a>
+                </div>
+                <div class="cardTienda">
+                    <div class="tiendaItem">
+                        <img src="../img/art14.jpg" alt="collar de plata dije de tortuga">
+                        <h3>Collar colección BEACH</h3>
+                    </div>
+                    <a href="" class="btn disabled botonDisabled">SIN STOCK</a>
+                </div>
             </div>
-            <a href="" class="botonDos">Ver todo</a>
         </section>
     </main>
+    <div class="fixed">
+        <img src="../img/carrito.png" alt="" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Carrito de compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Cantidad de productos:<span> 0 (cero)</span></p>
+            </div>
+        </div>
+    </div>
     <footer class="footerContenedor">
-        <div class="redes">
+        <div>
             <a href="https://web.whatsapp.com/" target="_blank"><img src="../img/whatsapp.png"
                     alt="Logo de whatsapp"></a>
             <h3>
@@ -183,7 +226,7 @@
                 <li><a href="./acercadegaia.html">A cerca de Gaia</a></li>
             </ul>
         </div>
-        <div class="redes">
+        <div>
             <a href="https://gmail.com/" target="_blank"><img src="../img/mail.png" alt="Icono de email"></a>
             <h3>
                 Contactanos por email

@@ -9,42 +9,47 @@
 }
 
 /*?---------------------BOTONES-----------------*/
+/*BOTON REUTILIZABLE EN TODAS LAS PAGINAS CON CARD DE PRODUCTO*/
 .boton {
+    font-family: "Arsenal", sans-serif;
+    width: 120px;
     background-color: #a48c74;
     text-decoration: none;
     border-radius: 8px;
     color: #ffffff;
     padding: 5px;
-    margin: 5px;
+    margin: 15px;
     text-align: center;
 }
 
 .boton:hover {
-    background-color: #c6adff;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     color: white;
 }
-
-.botonDos {
-    font-weight: 600;
-    width: 200px;
-    background-color: #a48c74;
+/*BOTON DE LA TIENDA PARA SIN STOCK*/
+.botonDisabled {
+    font-family: "Arsenal", sans-serif;
     text-decoration: none;
     border-radius: 8px;
-    color: #ffffff;
     padding: 5px;
-    margin: 10px;
+    margin: 15px;
     text-align: center;
+}
+/*BOTON DEL BANNER Y ENLACE DE INDEX A TIENDA*/
+.botonDos {
+    font-family: "Arsenal", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    width: 200px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.botonDos:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    color: white;
-}
-
+/*BOTON DEL BUSCADOR EN EL NAV*/
 .botonTres {
+    font-family: "Arsenal", sans-serif;
     background-color: #a48c74;
     color: #ffffff;
     border: 1px solid white;
@@ -57,7 +62,9 @@
     color: white;
 }
 
+/*BOTON DEL FORM EN CONTACTO*/
 .botonForm {
+    font-family: "Arsenal", sans-serif;
     width: 100%;
     background-color: #a48c74;
     color: #ffffff;
@@ -66,16 +73,9 @@
     margin-top: 5px;
 }
 
-button {
-    background-color: #c6adff;
-    border: none;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    margin-top: 5px;
+.botonForm:hover {
+    background-color: #ccc7c2;
+    color: black;
 }
 
 /*?-----------------------------------HEADER----------------------------------*/
@@ -86,17 +86,26 @@ button {
     font-style: normal;
 }
 
-nav img {
+.navApariencia a img {
     width: 40px;
     height: 40px;
 }
 
-.navPagina {
+.navApariencia div div ul li a {
     color: #ffffff;
     font-weight: 600;
 }
 
 /*?----------------------------------------MAIN---------------------------------*/
+.fixed img {
+    width: 80px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+}
 
 /**-------------------------------INDEX---------------------------------*/
 .hero {
@@ -139,16 +148,6 @@ nav img {
     font-style: italic;
     font-weight: normal;
     margin-top: 20px;
-}
-
-.hero .botonDos {
-    font-size: 18px;
-    font-family: "Arsenal", sans-serif;
-    font-style: normal;
-    border-radius: 8px;
-    color: white;
-    background-color: #a48c74;
-    margin: 15px;
 }
 
 .productos {
@@ -197,11 +196,6 @@ nav img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.cardProducto .boton {
-    width: 120px;
-    margin: 15px;
 }
 
 .productosItem {
@@ -346,6 +340,7 @@ nav img {
 }
 
 /**--------------------------------TIENDA---------------------------------*/
+
 .tituloTienda {
     margin: 20px;
     text-align: center;
@@ -403,11 +398,6 @@ nav img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.cardTienda .boton {
-    width: 120px;
-    margin: 15px;
 }
 
 .tiendaItem {
@@ -481,9 +471,10 @@ nav img {
     background-color: #ffffff;
     box-shadow: none;
 }
+
 .itemAcordeonEstilo:visited {
     color: #212529 !important;
-    background-color:#ffffff;
+    background-color: #ffffff;
     box-shadow: none;
 }
 
@@ -535,17 +526,20 @@ nav img {
     color: #c6adff;
     text-decoration: none;
 }
+
 .consultas .metodoPago {
     display: flex;
     justify-content: start;
     align-items: center;
 }
+
 .metodoPagoItem {
     margin: 0px 25px 0px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .consultas .metodoPagoItem h3 {
     font-size: 15px;
     font-weight: 600;
@@ -563,11 +557,24 @@ nav img {
     justify-content: center;
     align-items: center;
 }
+
 /**--------------------------A CERCA DE GAIA-----------------------------*/
 .historia {
+    font-family: "Arsenal", sans-serif;
     display: flex;
     justify-content: space-evenly;
     padding: 25px;
+}
+
+.titulo {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 30px;
+    font-style: italic;
+    color: #a48c74;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
 }
 
 .historia img {
@@ -602,7 +609,7 @@ nav img {
 .nuestroObjetivo {
     text-align: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     font-weight: 700;
@@ -623,7 +630,7 @@ nav img {
 .footerContenedor {
     font-family: "Arsenal", sans-serif;
     background-color: #ccc7c2;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -632,13 +639,13 @@ nav img {
     grid-template-rows: auto;
 }
 
-.footerContenedor .redes {
+.footerContenedor div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footerContenedor .redes h3 {
+.footerContenedor div h3 {
     font-size: 15px;
     font-weight: 500;
     display: flex;
@@ -647,7 +654,7 @@ nav img {
     margin: 0;
 }
 
-.footerContenedor .redes a img {
+.footerContenedor div a img {
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -664,8 +671,7 @@ nav img {
 }
 
 .footerContenedor .navBar img {
-    width: 40px;
-    height: 40px;
+    height: 35px;
     margin-right: 5px;
 }
 
@@ -709,6 +715,10 @@ nav img {
     .footerContenedor .navBar ul li {
         font-size: 14px;
     }
+
+    .fixed {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 990px) {
@@ -720,13 +730,13 @@ nav img {
         font-size: 20px;
     }
 
-    .footerContenedor .redes a img {
+    .footerContenedor div a img {
         width: 15px;
         height: 15px;
         margin-right: 3px;
     }
 
-    .footerContenedor .redes h3 {
+    .footerContenedor div h3 {
         font-size: 13px;
     }
 
@@ -743,7 +753,7 @@ nav img {
         gap: 5px;
     }
 
-    .footerContenedor .redes {
+    .footerContenedor div {
         order: 1;
     }
 
@@ -917,5 +927,138 @@ nav img {
 @media screen and (max-width: 350px) {
     .infoImportante {
         height: 200px;
+    }
+}
+
+/*------------- TIENDA ----------*/
+@media screen and (max-width: 1240px) {
+    .articulosTienda .productosContenedor {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .articulosTienda .productosContenedor {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .articulosTienda .productosContenedor {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+}
+
+/*----------- ENVIOS -----------*/
+@media screen and (max-width: 1280px) {
+    .mapaEnvios iframe {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .enviosContenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .envios {
+        width: 100%;
+    }
+
+    .mapaEnvios {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .mapaEnvios iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .tituloEnvios h2 {
+        font-size: 20px;
+    }
+
+    .mapaEnvios iframe {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tituloEnvios h2 {
+        font-size: 15px;
+    }
+
+    .tituloAcordeon {
+        font-size: 15px;
+    }
+
+    .otrasConsultas {
+        font-size: 15px;
+    }
+
+    .otrasConsultas h3 {
+        font-size: 15px;
+    }
+
+    .otrasConsultas .consultas h3 {
+        font-size: 15px;
+    }
+
+    .metodoPagoItem h3 {
+        font-size: 15px;
+    }
+}
+
+/*-----------A CERCA DE GAIA-------------*/
+@media screen and (max-width: 1040px) {
+    .titulo {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .historia img {
+        width: 250px;
+        height: 350px;
+    }
+
+    .nuestraHistoria p {
+        font-size: 15px;
+    }
+
+    .historia .nuestroObjetivo p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titulo {
+        font-size: 20px;
+    }
+
+    .historia img {
+        display: none;
+    }
+
+    .nuestraHistoria {
+        width: 100%;
     }
 }

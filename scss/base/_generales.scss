@@ -1,0 +1,89 @@
+/*--- HEADER ---*/
+/**-- ESTO IRIA A _GENERALES PORQUE PISA PROPIEDADES DEL NAV DE BOOTSTRAP**/
+.navApariencia {
+    background-color: #a48c74;
+    font-family: "Arsenal", sans-serif;
+    font-style: normal;
+
+    a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    div {
+        div {
+            ul {
+                li {
+                    a {
+                        color: #ffffff;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--- FOOTER ---*/
+.footerContenedor {
+    font-family: "Arsenal", sans-serif;
+    background-color: #ccc7c2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        h3 {
+            font-size: 15px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+    }
+    .navBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 5px 0px;
+            li {
+                text-align: center;
+                a {
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
