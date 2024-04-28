@@ -1,0 +1,79 @@
+//! VARIABLES REUTILIZABLES
+$colorPrincipal: #a48c74;
+$colorSecundario: #ffffff;
+$colorTerciario: #212529;
+$colorOtros: #ccc7c2;
+$colorAcento: #c6adff;
+
+$fontPrincipal: "Playfair Display", serif;
+$fontSecundaria: "Arsenal", sans-serif;
+
+//*EXTEND PARA BOTONES DE PRODUCTO
+%botones {
+    font-family: $fontSecundaria;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    width: 120px;
+} 
+//? MIXIN PARA CONTENEDOR FLEX -UNO-
+@mixin flex ($flex, $justify, $align, $direction) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+//? MIXIN PARA CONTENEDOR GRID DE CARDS
+@mixin grid ($grilla, $column, $row, $gap, $justifyitem) {
+    display: $grilla;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+    gap: $gap;
+    justify-items: $justifyitem;
+}
+@mixin gridTamanio ($ancho, $margen) {
+    width: $ancho;
+    margin: $margen;
+}
+//? MIXIN PARA CARDS
+@mixin cardTamanio ($ancho, $alto, $margen) {
+    width: $ancho;
+    height: $alto;
+    margin: $margen;
+}
+//?MIXIN PARA CONTENEDOR DE CARD-ITEM
+@mixin cardItem ($ancho, $alto, $aligntext, $position) {
+    width: $ancho;
+    height: $alto;
+    text-align: $aligntext;
+    position: $position;
+}
+//? MIXIN PARA CONTENIDO DE CARD-ITEM
+@mixin cardFoto ($ancho, $alto, $borderadio, $objectfit) {
+    width: $ancho;
+    height: $alto;
+    border-radius: $borderadio;
+    object-fit: $objectfit;
+}
+//? MIXINS PARA ETIQUETA DE PRODUCTO
+@mixin boxModel ($margen, $padding) {
+    margin: $margen;
+    padding: $padding;
+}
+@mixin etiqueta ($size, $weight, $aligntext, $position, $ubicacion, $ancho, $fondo) {
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $aligntext;
+    position: $position;
+    bottom: $ubicacion;
+    width: $ancho;
+    background-color: $fondo;
+}
+//? MIXIN PARA TITULOS
+@mixin titulos ($size, $weight, $aligntext, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $aligntext;
+    color: $color;
+}

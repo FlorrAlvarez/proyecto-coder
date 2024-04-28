@@ -1,8 +1,18 @@
-/*--- HEADER ---*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*?-------------------RESET---------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+//*--- HEADER ---*/
 /**-- ESTO IRIA A _GENERALES PORQUE PISA PROPIEDADES DEL NAV DE BOOTSTRAP**/
 .navApariencia {
-    background-color: #a48c74;
-    font-family: "Arsenal", sans-serif;
+    background-color: $colorPrincipal;
+    font-family: $fontSecundaria;
     font-style: normal;
 
     a img {
@@ -15,7 +25,7 @@
             ul {
                 li {
                     a {
-                        color: #ffffff;
+                        color: $colorSecundario;
                         font-weight: 600;
                     }
                 }
@@ -24,10 +34,80 @@
     }
 }
 
-/*--- FOOTER ---*/
+//*---BOTONES---*/
+/*BOTON REUTILIZABLE EN CARD DE PRODUCTO*/
+.boton {
+    @extend %botones;
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    @include boxModel (15px, 5px);
+    &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        color: $colorSecundario;
+    }
+}
+
+/*BOTON REUTILIZABLE EN CARD DE PRODUCTO SIN STOCK*/
+.botonDisabled {
+    @extend %botones;
+    @include boxModel (15px, 5px);
+}
+
+/*BOTON DEL BANNER Y ENLACE DE INDEX A TIENDA*/
+.botonDos {
+    @extend %botones;
+    font-style: normal;
+    font-weight: 600;
+    width: 160px;
+    @include boxModel (15px, 5px);
+    @include flex (flex, center, center, row);
+}
+
+/*BOTON DEL BUSCADOR EN EL NAV*/
+.botonTres {
+    font-family: $fontSecundaria;
+    border-radius: 5px;
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    border: 1px solid $colorSecundario;
+    margin: 0;
+
+    &:hover {
+        background-color: $colorAcento;
+        color: $colorSecundario;
+    }
+}
+
+/*BOTON DEL FORM EN CONTACTO*/
+.botonForm {
+    font-family: $fontSecundaria;
+    border-radius: 5px;
+    border: 1px solid $colorSecundario;
+    width: 100%;
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    margin-top: 5px;
+
+    &:hover {
+        background-color: $colorOtros;
+        color: $colorTerciario;
+    }
+}
+
+//*--- CLASES PARA EL ACORDEON DE BOOTSTRAP ---*/
+/**-- ESTO A _GENERALES PORQUE PISA PROPIEDADES DE BOOTSTRAP**/
+.itemAcordeonEstilo {
+    &:focus-within {
+        color: $colorPrincipal;
+        background-color: $colorSecundario;
+        box-shadow: none;
+    }
+}
+
+//*--- FOOTER ---*/
 .footerContenedor {
-    font-family: "Arsenal", sans-serif;
-    background-color: #ccc7c2;
+    font-family: $fontSecundaria;
+    background-color: $colorOtros;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -35,52 +115,47 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+
     div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex (flex, center, center, row);
+
         a {
             img {
                 width: 20px;
                 height: 20px;
                 margin-right: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex (flex, center, center, row);
             }
         }
+
         h3 {
             font-size: 15px;
             font-weight: 500;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             margin: 0;
+            @include flex (flex, center, center, row);
         }
     }
+
     .navBar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex (flex, center, center, column);
+
         img {
-            width: 40px;
-            height: 40px;
+            height: 35px;
             margin-right: 5px;
         }
+
         ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 5px 0px;
+            @include boxModel (5px 0px, 0);
+            @include flex (flex, center, center, row);
+
             li {
                 text-align: center;
+
                 a {
                     text-align: center;
                     text-decoration: none;
-                    color: black;
+                    color: $colorTerciario;
                     margin: 5px;
                 }
             }

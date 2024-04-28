@@ -1,0 +1,105 @@
+//* PAGE - ENVIOS
+.tituloEnvios {
+    h2 {
+        font-family: $fontSecundaria;
+        @include titulos (30px, 700, center, $colorPrincipal);
+        margin-top: 20px;
+    }
+}
+
+.enviosContenedor {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px 0px 20px 0px;
+
+    .envios {
+        font-family: $fontSecundaria;
+        width: 50%;
+
+        .tituloAcordeon {
+            font-family: $fontSecundaria;
+            @include titulos (20px, 700, left, $colorTerciario);
+            margin: 15px;
+        }
+
+        div .acordeonEstilo {
+            font-family: $fontSecundaria;
+            text-align: left;
+
+            div {
+
+                div {
+                    div {
+                        a {
+                            color: $colorAcento;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mapaEnvios {
+        font-family: $fontSecundaria;
+        text-align: left;
+        width: 40%;
+        @include flex (flex, center, start, column);
+
+        h3 {
+            @include titulos (20px, 700, left, $colorTerciario);
+            margin: 15px 0px 15px 0px;
+        }
+    }
+}
+.otrasConsultas {
+    margin: 20px;
+    font-family: $fontSecundaria;
+
+    h3 {
+        @include titulos (20px, 700, center, $colorTerciario);
+        margin: 15px 0px 15px 0px;
+    }
+
+    .consultas {
+        h3 {
+            @include titulos (20px, 700, left, $colorTerciario);
+        }
+
+        ul {
+            li {
+                a {
+                    color: $colorAcento;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .metodoPago {
+            @include flex (flex, start, center, row);
+
+            .metodoPagoItem {
+                margin: 0px 25px 0px 25px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 10px;
+                    @include flex (flex, center, center, row);
+                }
+
+                h3 {
+                    font-size: 15px;
+                    font-weight: 600;
+                    @include flex (flex, center, center, row);
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

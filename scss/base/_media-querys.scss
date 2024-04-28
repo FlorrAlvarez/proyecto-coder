@@ -1,0 +1,373 @@
+//! MEDIA QUERYS
+//* INDEX
+@media screen and (max-width: 1070px) {
+    .productos .productosContenedor {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+        justify-items: center;
+    }
+
+    .productos .productosContenedor .cardProducto .productosItem {
+        width: 220px;
+        height: 320px;
+    }
+
+    .footerContenedor .navBar ul li {
+        font-size: 14px;
+    }
+
+    .fixed {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .productos h2 {
+        font-size: 20px;
+    }
+
+    .productos .productosContenedor .cardProducto .productosItem h3 {
+        font-size: 16px;
+    }
+
+    .footerContenedor div a img {
+        width: 15px;
+        height: 15px;
+        margin-right: 3px;
+    }
+
+    .footerContenedor div h3 {
+        font-size: 13px;
+    }
+
+    .footerContenedor .navBar ul li {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .footerContenedor {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 5px;
+    }
+
+    .footerContenedor div {
+        order: 1;
+    }
+
+    .productos .productosContenedor {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .hero {
+        width: 100%;
+        height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    .botonDos {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .productos .productosContenedor {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .productos .productosContenedor .cardProducto .productosItem {
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .hero {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .hero h2 {
+        display: none;
+    }
+
+    .hero p {
+        display: none;
+    }
+
+    .productos .productosContenedor .cardProducto .productosItem {
+        width: 280px;
+        height: 330px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .productos .productosContenedor .cardProducto .productosItem {
+        width: 250px;
+        height: 300px;
+    }
+
+    .footerContenedor div h3 {
+        font-size: 10px;
+    }
+
+    .footerContenedor .navBar ul li a {
+        font-size: 10px;
+    }
+}
+
+//* CONTACTO
+@media screen and (max-width:1080px) {
+    .contenedorContacto {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedorContacto .formulario {
+        width: 100%;
+    }
+
+    .contenedorContacto .infoImportante {
+        width: 100%;
+        height: 200px;
+        margin-top: 15px;
+    }
+
+    .footerContenedor .navBar ul li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .carrusel h2 {
+        font-size: 25px;
+    }
+
+    .formularioEncabezado h2 {
+        font-size: 20px;
+    }
+
+    .formularioEncabezado p {
+        font-size: 16px;
+    }
+
+    .contenedorContacto .infoImportante {
+        height: 180px;
+    }
+
+    .contenedorContacto .infoImportante h3 {
+        font-size: 14px;
+    }
+
+    .contenedorContacto .infoImportante p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .carrusel h2 {
+        font-size: 20px;
+    }
+
+    .formularioEncabezado h2 {
+        font-size: 18px;
+    }
+
+    .formularioEncabezado p {
+        font-size: 14px;
+    }
+
+    .contenedorContacto .formulario {
+        font-size: 14px;
+    }
+
+    .contenedorContacto .formulario form .detalle h3 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .carrusel h2 {
+        display: none;
+    }
+
+    .formularioEncabezado h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .contenedorContacto .infoImportante {
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .contenedorContacto .infoImportante {
+        height: 260px;
+    }
+}
+
+//* TIENDA
+@media screen and (max-width: 1240px) {
+    .articulosTienda .articulosContenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .articulosTienda .articulosContenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .articulosTienda .articulosContenedor {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+}
+
+//* ENVIOS
+@media screen and (max-width: 1280px) {
+    .enviosContenedor .mapaEnvios iframe {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .enviosContenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .enviosContenedor .envios {
+        width: 100%;
+    }
+
+    .enviosContenedor .mapaEnvios {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .enviosContenedor .mapaEnvios iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .tituloEnvios h2 {
+        font-size: 20px;
+    }
+
+    .enviosContenedor .mapaEnvios iframe {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tituloEnvios h2 {
+        font-size: 15px;
+    }
+
+    .enviosContenedor .envios .tituloAcordeon {
+        font-size: 15px;
+    }
+
+    .enviosContenedor .mapaEnvios h3 {
+        font-size: 15px;
+    }
+
+    .otrasConsultas {
+        font-size: 15px;
+    }
+
+    .otrasConsultas h3 {
+        font-size: 15px;
+    }
+
+    .otrasConsultas .consultas h3 {
+        font-size: 15px;
+    }
+}
+
+//* A CERCA DE GAIA
+@media screen and (max-width: 1040px) {
+    .titulo {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .historia img {
+        width: 250px;
+        height: 350px;
+    }
+
+    .historia .historiaDiv p {
+        font-size: 15px;
+    }
+
+    .historia .objetivoDiv p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titulo {
+        font-size: 20px;
+    }
+
+    .historia img {
+        display: none;
+    }
+
+    .historia .historiaDiv {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .banner2 img {
+        object-fit: scale-down;
+    }
+}

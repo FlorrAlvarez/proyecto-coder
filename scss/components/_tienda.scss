@@ -1,0 +1,50 @@
+//* PAGE - TIENDA
+.tituloTienda {
+    margin: 20px;
+    text-align: center;
+
+    h2 {
+        font-family: $fontPrincipal;
+        font-size: 40px;
+        margin: 10px;
+        color: $colorPrincipal;
+    }
+
+    h3 {
+        font-family: $fontSecundaria;
+        font-size: 30px;
+        margin: 10px;
+        color: $colorPrincipal;
+    }
+}
+
+.articulosTienda {
+    font-family: $fontSecundaria;
+    @include flex (flex, center, center, column);
+
+    .articulosContenedor {
+        @include grid (grid, repeat(4, 1fr), auto, 50px, center);
+        @include gridTamanio (100%, 20px);
+
+        .cardTienda {
+            @include cardTamanio (250px, 400px, 10px);
+            @include flex (flex, center, center, column);
+
+            .tiendaItem {
+                @include cardItem (250px, 350px, center, relative);
+                box-shadow: 1px 2px 33px 1px rgba(204, 199, 194, 0.72);
+                -webkit-box-shadow: 1px 2px 33px 1px rgba(204, 199, 194, 0.72);
+                -moz-box-shadow: 1px 2px 33px 1px rgba(204, 199, 194, 0.72);
+
+                img {
+                    @include cardFoto (100%, 100%, 8px, cover);
+                }
+
+                h3 {
+                    @include boxModel (0, 5px);
+                    @include etiqueta (20px, 400, center, absolute, 0, 100%, #ffffff5b);
+                }
+            }
+        }
+    }
+}

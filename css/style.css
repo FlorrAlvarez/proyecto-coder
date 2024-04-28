@@ -283,7 +283,6 @@
     border-radius: 50%;
     width: 14px;
     height: 14px;
-
     border: 2px solid #ccc7c2;
 }
 
@@ -370,7 +369,7 @@
 
 /*!------CONTENEDOR PADRE GRID Y FLEX-----*/
 
-.articulosTienda .productosContenedor {
+.articulosTienda .articulosContenedor {
     width: 100%;
     margin: 20px;
     display: grid;
@@ -380,7 +379,7 @@
     justify-items: center;
 }
 
-.articulosTienda .productosContenedor div img {
+.articulosTienda .articulosContenedor div img {
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -450,11 +449,10 @@
     color: #a48c74;
 }
 
-.envios ul li a {
+/*.envios ul li a {
     font-weight: 500;
     text-decoration: none;
-    color: #c6adff;
-}
+    color: #c6adff;}*/
 
 .acordeonEstilo {
     font-family: "Arsenal", sans-serif;
@@ -465,13 +463,13 @@
     color: #c6adff;
     text-decoration: none;
 }
-
+/*ESTO TIENE QUE IR EN _GENERALES.SCSS*/
 .itemAcordeonEstilo:focus-within {
     color: #a48c74;
     background-color: #ffffff;
     box-shadow: none;
 }
-
+/*ESTO TIENE QUE IR EN _GENERALES.SCSS*/
 .itemAcordeonEstilo:visited {
     color: #212529 !important;
     background-color: #ffffff;
@@ -593,7 +591,7 @@
     font-size: 20px;
 }
 
-.nuestraHistoria {
+.historiaDiv {
     width: 50%;
     text-align: left;
     display: flex;
@@ -601,12 +599,12 @@
     flex-direction: column;
 }
 
-.nuestraHistoria p span {
+.historiaDiv p span {
     font-weight: 600;
     color: #a48c74;
 }
 
-.nuestroObjetivo {
+.objetivoDiv {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -932,7 +930,7 @@
 
 /*------------- TIENDA ----------*/
 @media screen and (max-width: 1240px) {
-    .articulosTienda .productosContenedor {
+    .articulosTienda .articulosContenedor {
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -942,7 +940,7 @@
 }
 
 @media screen and (max-width: 890px) {
-    .articulosTienda .productosContenedor {
+    .articulosTienda .articulosContenedor {
         margin: 20px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -952,7 +950,7 @@
 }
 
 @media screen and (max-width: 640px) {
-    .articulosTienda .productosContenedor {
+    .articulosTienda .articulosContenedor {
         margin: 10px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);

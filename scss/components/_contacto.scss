@@ -1,0 +1,114 @@
+//* PAGE - CONTACTO
+.carrusel {
+    h2 {
+        font-family: $fontPrincipal;
+        font-style: italic;
+        background-color: #e2dedb;
+        @include titulos (30px, 600, center, $colorPrincipal);
+        @include boxModel (0, 20px);
+    }
+}
+
+.formularioEncabezado {
+    font-family: $fontSecundaria;
+    margin: 40px 20px 40px 20px;
+
+    h2 {
+        @include titulos (25px, 600, center, $colorPrincipal);
+    }
+
+    p {
+        font-size: 18px;
+        font-style: italic;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.contenedorContacto {
+    font-family: $fontSecundaria;
+    margin: 40px 20px 40px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .formulario {
+        width: 50%;
+
+        form {
+            .formularioDatos {
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border: 2px solid $colorOtros;
+                    border-radius: 4px;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    resize: none;
+                }
+            }
+
+            .formularioMotivo {
+                width: 70%;
+                margin: 8px 0;
+                @include flex (flex, space-between, center, row);
+
+                div {
+                    @include flex (flex, space-between, center, row);
+                    margin: 5px;
+
+                    label {
+                        margin-right: 5px;
+                    }
+
+                    input {
+                        appearance: none;
+                        border-radius: 50%;
+                        width: 14px;
+                        height: 14px;
+                        border: 2px solid $colorOtros;
+
+                        &:checked {
+                            border-radius: 50%;
+                            border: 5px solid $colorPrincipal;
+                        }
+                    }
+                }
+            }
+
+            .detalle {
+                h3 {
+                    font-size: 16px;
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 150px;
+                    color: #adadad;
+                    border: 2px solid $colorOtros;
+                    border-radius: 4px;
+                    resize: none;
+                    padding: 12px 20px
+                }
+            }
+        }
+    }
+
+    .infoImportante {
+        width: 40%;
+        height: 220px;
+        padding: 12px;
+        border: 2px solid $colorTerciario;
+        border-radius: 4px;
+
+        h3 {
+            @include titulos (16px, 600, left, $colorTerciario)
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+}
