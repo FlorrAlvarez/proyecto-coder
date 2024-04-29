@@ -470,11 +470,12 @@
     box-shadow: none;
 }
 /*ESTO TIENE QUE IR EN _GENERALES.SCSS*/
+/*! ANULADO
 .itemAcordeonEstilo:visited {
     color: #212529 !important;
     background-color: #ffffff;
     box-shadow: none;
-}
+} */
 
 .mapaEnvios {
     text-align: left;

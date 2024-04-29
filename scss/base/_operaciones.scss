@@ -43,9 +43,10 @@ $fontSecundaria: "Arsenal", sans-serif;
     margin: $margen;
 }
 //?MIXIN PARA CONTENEDOR DE CARD-ITEM
-@mixin cardItem ($ancho, $alto, $aligntext, $position) {
+@mixin cardItem ($ancho, $alto, $borderadio, $aligntext, $position) {
     width: $ancho;
     height: $alto;
+    border-radius: 8px;
     text-align: $aligntext;
     position: $position;
 }
@@ -61,7 +62,7 @@ $fontSecundaria: "Arsenal", sans-serif;
     margin: $margen;
     padding: $padding;
 }
-@mixin etiqueta ($size, $weight, $aligntext, $position, $ubicacion, $ancho, $fondo) {
+@mixin etiqueta ($size, $weight, $aligntext, $position, $ubicacion, $ancho, $fondo, $borderadiol, $borderadior) {
     font-size: $size;
     font-weight: $weight;
     text-align: $aligntext;
@@ -69,6 +70,9 @@ $fontSecundaria: "Arsenal", sans-serif;
     bottom: $ubicacion;
     width: $ancho;
     background-color: $fondo;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
 }
 //? MIXIN PARA TITULOS
 @mixin titulos ($size, $weight, $aligntext, $color) {
